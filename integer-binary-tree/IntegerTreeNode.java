@@ -54,11 +54,11 @@ public class IntegerTreeNode {
 		return this.left.getMin();
 	}
 	
-	public String toString(String tree) {
-		tree += "[" + this.value + " L";
+	public String toString() {
+		String tree = "[" + this.value + " L";
 		
 		if (left != null) {
-			tree += left.toString(tree);
+			tree += left.toString();
 		} else {
 			tree += "[]";
 		}
@@ -66,7 +66,7 @@ public class IntegerTreeNode {
 		tree += " R";
 		
 		if (right != null) {
-			tree += right.toString(tree);
+			tree += right.toString();
 		} else {
 			tree += "[]";
 		}
@@ -74,6 +74,20 @@ public class IntegerTreeNode {
 		tree += "]";
 		
 		return tree;
+	}
+	
+	public String toStringSimplified() {
+		String tree = "[" + this.value;
+		
+		if (left != null) {
+			tree += " " + left.toStringSimplified();
+		}
+		
+		if (right != null) {
+			tree += " " + right.toStringSimplified();
+		}
+		
+		return tree + "]";
 	}
 
 }

@@ -4,9 +4,9 @@ public class Launcher {
 		launcher.launch();
 	}
 	public void launch() {
-		IntegerTreeNode root = new IntegerTreeNode(-5);
+		IntegerTreeNode root = new IntegerTreeNode(3);
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 5; i++) {
 			root.add(i);
 		}
 		
@@ -18,8 +18,14 @@ public class Launcher {
 		
 		System.out.println(minValue);
 		
-		String tree = root.toString("");
+		String tree = root.toString();
 		
 		System.out.println(tree);
+		
+		System.out.println("");
+		
+		String simplifiedTree = root.toStringSimplified();
+		
+		System.out.println(simplifiedTree);
 	}
 }
