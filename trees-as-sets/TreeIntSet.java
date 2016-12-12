@@ -8,6 +8,10 @@ public class TreeIntSet implements IntSet {
 	}
 
 	public void add(int value) {
+		if (value == this.value) {
+			return;
+		}
+		
 		if (value > this.value) {
 			if (right == null) {
 				right = new TreeIntSet(value);

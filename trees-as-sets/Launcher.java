@@ -10,13 +10,7 @@ public class Launcher {
 		
 		root.add(5);
 		
-		root.add(3);
-		
-		root.add(8);
-
-		root.add(11);
-		
-		root.add(12);
+		root.add(5);
 		
 		String tree = root.toString();
 		
