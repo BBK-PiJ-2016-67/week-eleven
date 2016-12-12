@@ -17,5 +17,9 @@ public class Launcher {
 		int minValue = root.getMin();
 		
 		System.out.println(minValue);
+		
+		String tree = root.toString("");
+		
+		System.out.println(tree);
 	}
 }
