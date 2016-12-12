@@ -89,5 +89,29 @@ public class IntegerTreeNode {
 		
 		return tree + "]";
 	}
+	
+	public int depth() {
+		int totalDepth = 0;
+		
+		if (left != null || right != null) {
+			totalDepth = 1;
+		}
+		
+		int leftDepth = 0;
+		
+		if (left != null) {
+			leftDepth = left.depth();
+		}
+		
+		int rightDepth = 0;
+		
+		if (right != null) {
+			rightDepth = right.depth();
+		}
+		
+		totalDepth += leftDepth > rightDepth ? leftDepth : rightDepth;
+		
+		return totalDepth;
+	}
 
 }

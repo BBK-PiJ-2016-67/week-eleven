@@ -4,11 +4,19 @@ public class Launcher {
 		launcher.launch();
 	}
 	public void launch() {
-		IntegerTreeNode root = new IntegerTreeNode(3);
+		IntegerTreeNode root = new IntegerTreeNode(6);
 		
-		for (int i = 0; i < 5; i++) {
-			root.add(i);
-		}
+		root.add(9);
+		
+		root.add(5);
+		
+		root.add(3);
+		
+		root.add(8);
+
+		root.add(11);
+		
+		root.add(12);
 		
 		int maxValue = root.getMax();
 		
@@ -27,5 +35,11 @@ public class Launcher {
 		String simplifiedTree = root.toStringSimplified();
 		
 		System.out.println(simplifiedTree);
+		
+		int depth = root.depth();
+		
+		System.out.println();
+		
+		System.out.println("Tree depth is: " + depth);
 	}
 }
