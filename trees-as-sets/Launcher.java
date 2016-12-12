@@ -4,13 +4,21 @@ public class Launcher {
 		launcher.launch();
 	}
 	public void launch() {
-		TreeIntSet root = new TreeIntSet(6);
+		ListIntSet root = new ListIntSet();
 		
 		root.add(9);
 		
 		root.add(5);
 		
 		root.add(5);
+		
+		root.add(7);
+		
+		root.add(2);
+		
+		root.add(12);
+		
+		root.add(13);
 		
 		String tree = root.toString();
 		
